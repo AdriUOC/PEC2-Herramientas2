@@ -25,7 +25,9 @@ body {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
-
+button {
+  color: $primary;
+}
 .uoc-logo {
   display: block;
   margin-left: auto;
@@ -43,7 +45,7 @@ body {
   font-family: $font-family-serif;
   font-size: 24px;
   font-weight: 700;
-  color: $uoc-corporate;
+  color: $uoc-corporate; 
 
   @media (min-width: $mqMinWidth) {
     font-size: 36px;
