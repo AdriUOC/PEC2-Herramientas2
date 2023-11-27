@@ -5,24 +5,39 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <title>Portada</title>
   </head>
   <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
+    <div class="nav">
+      <nav class="nav">
+        <img src="assets/images/logoTennis.png" class="img-thumbnail logoTennisTop" alt="Tennis">
+        <a class="nav-link active" aria-current="page" href="#">Portada</a>
+        <a class="nav-link" href="#">Jugadores</a>
+        <a class="nav-link" href="#">Noticias</a>
+        <a class="nav-link" href="#">Libre</a>
+      </nav>
+    </div>
+    
+    <img class="img-fluid fondo" src="assets/images/elFondoBuenoReallyGood.jpg" alt="Foton tenis"/>
+
+    <div class="mainText">
+      <h1>Hola, la mejor página de tenis!</h1>
       <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
+        Estamos emocionados de darles la bienvenida a la página oficial de nuestro torneo anual de tenis, donde la pasión por el deporte se une con la amistad y la diversión. Prepárense para vivir momentos llenos de adrenalina, risas y, por supuesto, ¡grandes rallies en la cancha!
       </p>
-      <button type="button" class="btn btn-primary">
-        Hola
-      </button>
+      <p>
+        En nuestra página encontrarán toda la información que necesitan para ser parte de esta experiencia única. Desde los detalles del torneo y las reglas hasta perfiles de los equipos participantes, ¡aquí encontrarán todo lo necesario para sumergirse en la atmósfera competitiva y amistosa que caracteriza a nuestro evento!
+      </p>
+      <p>
+        No importa si eres un jugador experimentado o si apenas estás comenzando a dar tus primeros saques, nuestro torneo está diseñado para todos los niveles. Lo más importante es disfrutar del juego, compartir momentos inolvidables con amigos y, por supuesto, luchar por el codiciado trofeo del Torneo de Tenis entre Amigos.
+      </p>
+      <p>
+        ¿Estás listo para competir, divertirte y vivir la emoción del tenis entre amigos? Explora nuestra página, regístrate y prepárate para vivir un torneo que va más allá de la competencia; es sobre la camaradería y la pasión por el deporte que compartimos.
+      </p>
+      <p class="especial">
+        <i class="fa-solid fa-trophy fa-bounce"></i>
+        ¡Nos vemos en la cancha!
+      </p>
     </div>
     <include src="./views/footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
