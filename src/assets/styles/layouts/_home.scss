@@ -11,11 +11,12 @@ body {
 }
 
 // Lo que yo he añadido
-div .nav {
+.nav {
   margin: 2rem;
 }
 
 .nav-link {
+  margin: 2rem;
   color: $uoc-corporate;
 }
 
@@ -33,7 +34,7 @@ div .nav {
 .img-thumbnail.logoTennisBottom{
   background-color: transparent;
   border: transparent;
-  width: 3%;
+  width: 6%;
 }
 
 .mainText {
@@ -60,10 +61,173 @@ div .nav {
   }
 }
 
+h1{ 
+  text-align: center;
+  font-family: $font-family-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: $uoc-corporate; 
+
+  @media (min-width: $mqMinWidth) {
+    font-size: 36px;
+  }
+}
+
+.divParticipantes {
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente 
+                      fila si no caben en el ancho de la pantalla */
+  justify-content: space-between; /* Espacio igual entre los elementos */
+  text-align: center;
+  border-bottom: 0.2cqmin solid black; // nueva unidad de tamaño
+  border-top: 0.2cqmin solid black; // nueva unidad de tamaño
+  img {
+    border-radius: 25px;
+  }
+  h2 {
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+  h3{
+    margin-bottom: 5rem;
+  }
+  iframe{
+    margin-bottom: 6rem;
+  }
+}
+
+.logoWimbledon {
+  margin-top: 5rem;
+}
+
+.participanteLine {
+  border-bottom: 0.2cqmin solid black; // nueva unidad de tamaño
+}
+
+p.participantes {
+  text-align: center;
+}
+
+h2.wimbledon { 
+  color: rgb(38, 167, 96); 
+}
+
+h2.rolandGarros{
+  color: color(display-p3 0.833 0.566 0.233 /1); // nueva función de color. If you use Display-P3, you get a wider range of access to these vibrant colors
+}
+
+h2.ausOpen{
+  color: rgb(70, 139, 196); 
+}
+
+h2.usOpen{
+  margin-top: 8rem;
+  color: rgb(33, 57, 167);
+}
+
+.logoAo{
+  margin-left: 10rem;
+}
+
+.logoUsOpen{
+  margin-top: 8rem;
+}
 // Aquí termina lo que yo he añadido
 
-.nav-footer {
+footer * {
   margin-top: 1.5rem;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   justify-content: center;
+}
+
+@supports(display: grid){
+  body.grid{
+    display: grid;
+    grid-template-columns:20% 60% 20%;
+    grid-template-rows: auto auto auto auto;
+    font-family: $font-family-sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    background-color: $uoc-bg;
+    color: $uoc-corporate;
+  }
+  
+  .nav.mainNav{
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  // Lo que yo he añadido
+  .nav {
+    margin: 2rem;
+  }
+  
+  .nav-link {
+    margin: 2rem;
+    color: $uoc-corporate;
+  }
+  
+  .nav-link.active{  
+    font-size: large;
+    font-weight: bold;
+  }
+  
+  .img-thumbnail.logoTennisTop {
+    background-color: transparent;
+    border: transparent;
+    width: 6%;
+  }
+  
+  .img-thumbnail.logoTennisBottom{
+    background-color: transparent;
+    border: transparent;
+    width: 6%;
+  }
+  
+  .img-fluid {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+  
+  .mainText {
+    grid-column: 2 / 3;
+    grid-row: 3;
+    margin: 2rem;
+    text-align: justify;
+    h1 {
+      margin-bottom: 2rem;
+      text-align: center;
+      font-family: $font-family-serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: $uoc-corporate; 
+  
+      @media (min-width: $mqMinWidth) {
+        font-size: 36px;
+      }
+    }
+    p{
+      margin-right: 18rem;
+      margin-left: 18rem;
+    }
+    p.especial {
+      text-align: center;
+    }
+  }
+  
+  // Aquí termina lo que yo he añadido
+  
+  footer * {
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+    justify-content: center;
+  }
+  footer{
+    grid-column: 1 / -1;
+    grid-row: 4;
+  }
 }

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de Grid</title>
+  <style>
+    .contenedor {
+      display: grid;
+      grid-template-rows: 1fr 5fr 7fr 1fr;
+      grid-template-columns: 0.5fr 2fr 1fr;
+      height: 800px; /* Altura del contenedor */
+    }
+
+    .elemento {
+      background-color: lightblue;
+      padding: 20px;
+      border: 1px solid darkblue;
+      text-align: center;
+    }
+
+    /* Posicionamiento de elementos en el grid */
+    .elemento1 {
+      grid-row: 2; /* Ocupa la primera fila */
+      grid-column: 1; /* Ocupa la primera columna */
+    }
+
+    .elemento2 {
+      grid-row: 2 / span 2; /* Ocupa desde la segunda fila hasta la tercera */
+      grid-column: 2 / 4; /* Ocupa desde la segunda columna hasta la tercera */
+    }
+
+    .elemento3 {
+      grid-row: 4; /* Ocupa la cuarta fila */
+      grid-column: 1 / span 2; /* Ocupa desde la primera columna hasta la segunda */
+    }
+
+    .elemento4 {
+      grid-row: 3; /* Ocupa la tercera fila */
+      grid-column: 3; /* Ocupa la tercera columna */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contenedor">
+    <div class="elemento elemento1">Elemento 1</div>
+    <div class="elemento elemento2">Elemento 2</div>
+    <div class="elemento elemento3">Elemento 3</div>
+    <div class="elemento elemento4">Elemento 4</div>
+  </div>
+
+</body>
+</html>
