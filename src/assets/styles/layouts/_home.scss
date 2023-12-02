@@ -37,17 +37,30 @@ body {
   border: transparent;
 }
 
+h1{ 
+  font-family: $font-family-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: $uoc-corporate;
+  text-align: center;
+
+  @media (min-width: $mqMinWidth) {
+    font-size: 36px;
+  }
+}
+
 .main-text {
   margin: 2rem;
   text-align: justify;
+
   h1 {
     margin-bottom: 2rem;
     font-family: $font-family-serif;
     font-size: 24px;
-    text-align: center;
     font-weight: 700;
-    color: $uoc-corporate; 
-
+    color: $uoc-corporate;
+    text-align: center;
+    
     @media (min-width: $mqMinWidth) {
       font-size: 36px;
     }
@@ -61,34 +74,22 @@ body {
   }
 }
 
-h1{ 
-  text-align: center;
-  font-family: $font-family-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: $uoc-corporate; 
-
-  @media (min-width: $mqMinWidth) {
-    font-size: 36px;
-  }
-}
-
 .patrocinador{
   margin-bottom: 3rem;
 }
 
 .div-participantes {
-  margin-top: 5rem;
-  margin-left: 5rem;
-  margin-right: 5rem;
-  margin-bottom: 5rem;
   display: flex;
   flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente 
                       fila si no caben en el ancho de la pantalla */
   justify-content: space-between; /* Espacio igual entre los elementos */
+  margin-top: 5rem;
+  margin-right: 5rem;
+  margin-bottom: 5rem;
+  margin-left: 5rem;
   text-align: center;
-  border-bottom: 0.2cqmin solid black; // nueva unidad de tamaño
   border-top: 0.2cqmin solid black; // nueva unidad de tamaño
+  border-bottom: 0.2cqmin solid black; // nueva unidad de tamaño
   img {
     border-radius: 25px;
   }
@@ -104,11 +105,11 @@ h1{
   }
 }
 
-.logoWimbledon {
+.logo-wimbledon {
   margin-top: 5rem;
 }
 
-.participanteLine {
+.participante-line {
   border-bottom: 0.2cqmin solid black; // nueva unidad de tamaño
 }
 
@@ -121,23 +122,25 @@ h2.wimbledon {
 }
 
 h2.roland-garros{
-  color: color(display-p3 0.833 0.566 0.233 / 1); // nueva función de color. If you use Display-P3, you get a wider range of access to these vibrant colors
+  // nueva función de color. If you use Display-P3, 
+  // you get a wider range of access to these vibrant colors
+  color: color(display-p3 0.833 0.566 0.233 / 1); 
 }
 
-h2.ausOpen{
+h2.aus-open{
   color: rgb(70, 139, 196); 
 }
 
-h2.usOpen{
+h2.us-open{
   margin-top: 8rem;
   color: rgb(33, 57, 167);
 }
 
-.logoAo{
+.logo-ao{
   margin-left: 10rem;
 }
 
-.logoUsOpen{
+.logo-us-open{
   margin-top: 8rem;
 }
 
@@ -145,13 +148,19 @@ h2.usOpen{
   margin-bottom: 15rem;
 }
 .carousel-item{
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+}
+
+.mencion {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
 }
 
 .carousel-control-prev-icon, .carousel-control-next-icon {
-  background-color: black; /* Cambia este color según tus preferencias */
   color: black; /* Cambia este color si es necesario para el icono */
+  background-color: black; /* Cambia este color según tus preferencias */
 }
 
 .consejo{
@@ -159,8 +168,8 @@ h2.usOpen{
   justify-content: center;
   margin-bottom: 5rem;
   button, button:hover{
-    background-color: black;
     color: white;
+    background-color: black;
   }
 }
 
@@ -175,42 +184,45 @@ h2.usOpen{
 
 .toast-container {
   position: fixed;
-  bottom: 7rem;
   right: 6rem;
+  bottom: 7rem;
 }
 
 .content {
-  text-align: center;
   align-items: center;
   justify-content: center;
+  text-align: center;
   p{
     margin-top: 3rem;
-    margin-left: 12rem;
     margin-right: 12rem;
+    margin-left: 12rem;
   }
   h4{
     margin-top: 4rem;
   }
-  .ulCentro{
+  .ul-centro{
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     margin-top: 2rem;
   }
   ul {
-    text-align: justify;
     font-weight: bold;
+    text-align: justify;
   }
-  // :is() toma una lista de selectores como argumento y selecciona cualquier elemento que pueda ser seleccionado por uno de los selectores en esa lista
+  // :is() toma una lista de selectores como argumento y selecciona
+  // cualquier elemento que pueda ser seleccionado 
+  // por uno de los selectores en esa lista
   :is(ol, ul) :is(ol, ul){
     font-weight: normal;
   }
   :is(ol, ul) :is(ol, ul) :is(ol, ul) {
-    list-style-type:lower-roman;
     color: chocolate;
+    list-style-type:lower-roman;
   }
 }
-//El siguiente selector selecciona únicamente los elementos <bloqckquote> que contienen <p> hijo:
+//El siguiente selector selecciona únicamente los elementos 
+// <bloqckquote> que contienen <p> hijo:
 blockquote:has(> p) { 
   font-size: large;
   font-style: italic;
@@ -219,26 +231,26 @@ blockquote:has(> p) {
 // Aquí termina lo que yo he añadido
 
 footer * {
+  justify-content: center;
   margin-top: 1.5rem;
   font-size: 0.8rem;
-  justify-content: center;
 }
 
 @supports(display: grid){
   body.grid{
     display: grid;
-    grid-template-columns:20% 60% 20%;
     grid-template-rows: auto auto auto auto;
+    grid-template-columns:20% 60% 20%;
     font-family: $font-family-sans-serif;
     font-size: 16px;
     line-height: 24px;
-    background-color: $uoc-bg;
     color: $uoc-corporate;
+    background-color: $uoc-bg;
   }
   
-  .nav.mainNav{
-    grid-column: 1 / -1;
+  .nav.main-nav{
     grid-row: 1;
+    grid-column: 1 / -1;
   }
 
   // Lo que yo he añadido
@@ -257,35 +269,35 @@ footer * {
   }
   
   .img-thumbnail.logo-tennis-top {
+    width: 6%;
     background-color: transparent;
     border: transparent;
-    width: 6%;
   }
   
   .img-thumbnail.logo-tennis-bottom{
+    width: 6%;
     background-color: transparent;
     border: transparent;
-    width: 6%;
   }
   
   .img-fluid {
-    grid-column: 1 / -1;
     grid-row: 2;
+    grid-column: 1 / -1;
   }
   
   .main-text {
-    grid-column: 2 / 3;
     grid-row: 3;
+    grid-column: 2 / 3;
     margin: 2rem;
     text-align: justify;
     h1 {
       margin-bottom: 2rem;
-      text-align: center;
       font-family: $font-family-serif;
       font-size: 24px;
       font-weight: 700;
-      color: $uoc-corporate; 
-  
+      color: $uoc-corporate;
+      text-align: center;
+
       @media (min-width: $mqMinWidth) {
         font-size: 36px;
       }
@@ -302,12 +314,12 @@ footer * {
   // Aquí termina lo que yo he añadido
   
   footer * {
+    justify-content: center;
     margin-top: 1.5rem;
     font-size: 0.8rem;
-    justify-content: center;
   }
   footer{
-    grid-column: 1 / -1;
     grid-row: 4;
+    grid-column: 1 / -1;
   }
 }

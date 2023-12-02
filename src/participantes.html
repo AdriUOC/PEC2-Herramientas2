@@ -5,10 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+    <link href="/css/custom.css" rel="stylesheet">
     <title>Participantes</title>
   </head>
   <body>
-      <nav class="nav mainNav">
+      <nav class="nav main-nav">
           <img src="assets/images/logoTennis.png" class="img-thumbnail logo-tennis-top" alt="Tennis">
           <a class="nav-link" href="/src/index.html">Portada</a>
           <a class="nav-link active" aria-current="page" href="/src/participantes.html">Participantes</a>
@@ -21,12 +22,12 @@
     <p class="participantes">¡Incluye la información de su ranking mundial actual en su disciplina!</p>
     <div class="div-participantes">
 
-      <div class="logoWimbledon">
+      <div class="logo-wimbledon">
         <img src="./assets/images/Novak.jpg?width=800" alt="Novak">
         <h2>Novak Djokovic</h2>
         <h3>Opción a GOAT, mucha flexibilidad, es un tío simpático.</h3>
       </div>
-      <div class="logoWimbledon">
+      <div class="logo-wimbledon">
         <img src="./assets/images/carlos.jpg?width=800" alt="Carlos">
         <h2>Carlos Alcaraz</h2>
         <h3>Maneja todos los golpes. Físico inalcanzable. Murcia existe.</h3>
@@ -63,7 +64,11 @@
       </div>
     </div>
 
-    
+    <div class="mencion">
+      <button type="button" class="btn btn-primary" data-bs-toggle="popover" 
+      data-bs-title="Mención Honorífica" data-bs-content="Mención honorífica a Don Rafael Nadal Parera que este año no podrá acudir por lesión a nuestro gran torneo.">
+        Pincha aquí para mención honorífica secreta</button>
+    </div>
     <include src="./views/footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
   </body>
