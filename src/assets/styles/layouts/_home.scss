@@ -216,7 +216,7 @@ h2.us-open{
   :is(ol, ul) :is(ol, ul){
     font-weight: normal;
   }
-  :is(ol, ul) :is(ol, ul) :is(ol, ul) {
+  :is(ol, ul) :is(ol, ul) :is(ol) {
     color: chocolate;
     list-style-type:lower-roman;
   }

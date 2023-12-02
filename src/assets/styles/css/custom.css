@@ -11479,7 +11479,7 @@ h2.us-open, .us-open.h2 {
 .content :is(ol, ul) :is(ol, ul) {
   font-weight: normal;
 }
-.content :is(ol, ul) :is(ol, ul) :is(ol, ul) {
+.content :is(ol, ul) :is(ol, ul) :is(ol) {
   color: chocolate;
   list-style-type: lower-roman;
 }
