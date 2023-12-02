@@ -9,7 +9,7 @@
   </head>
   <body>
       <nav class="nav mainNav">
-          <img src="assets/images/logoTennis.png" class="img-thumbnail logoTennisTop" alt="Tennis">
+          <img src="assets/images/logoTennis.png" class="img-thumbnail logo-tennis-top" alt="Tennis">
           <a class="nav-link" href="/src/index.html">Portada</a>
           <a class="nav-link" href="/src/participantes.html">Participantes</a>
           <a class="nav-link" href="/src/noticias.html">Noticias</a>
@@ -20,7 +20,7 @@
     <h1><i class="fa-solid fa-person"></i>Lista de participantes del Megatorneo<i class="fa-solid fa-person"></i></h1>
     <p class="participantes">¡Incluye la información de su ranking mundial actual en su disciplina!</p>
     
-    <div class="divParticipantes">
+    <div class="div-participantes">
       <div class="participanteLine">
         <img class="logoWimbledon" src="./assets/images/wimbledon.png?width=530" alt="Wimbledon">
         <h2 class="wimbledon">Wimbledon</h2>
@@ -30,7 +30,7 @@
       </div>
       <div class="participanteLine">
         <img class="logoWimbledon" src="./assets/images/rolandGarros.png?width=800" alt="Roland Garros">
-        <h2 class="rolandGarros">Roland Garros</h2>
+        <h2 class="roland-garros">Roland Garros</h2>
         <h3>Bueno torneo, tierra batida, las pelotas las ponía Nadal.</h3>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/Rfcfzh2ujVE?si=sV4IZfwQkyiQrlPJ" title="YouTube video player" frameborder="0" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -51,7 +51,59 @@
       </div>
     </div>
 
-    
+    <h1 class="patrocinador">Las mejores raquetas de nuestro patrocinador: BABOLAT</h1>
+
+    <div class="container centrar-verticalmente">
+      <div id="carouselComponent" class="carousel slide text-center">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselComponent" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselComponent" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselComponent" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <h3>Babolat Pure Aero</h3>
+            <img src="/src/assets/images/pureAero.png?width=500" class="d-block w-5" alt="Babolat Pure Aero">
+          </div>
+          <div class="carousel-item">
+            <h3>Babolat Pure Drive</h3>
+            <img src="/src/assets/images/pureDrive.png?width=500" class="d-block w-5" alt="Babolat Pure Drive">
+          </div>
+          <div class="carousel-item">
+            <h3>Babolat Pure Strike</h3>
+            <img src="/src/assets/images/pureStrike.png?width=500" class="d-block w-5" alt="Babolat Pure Strike">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselComponent" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselComponent" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="consejo">
+      <button type="button" class="btn btn-lg btn-danger" id="mostrarToast" data-bs-toggle="popover" 
+      data-bs-title="Consejo" data-bs-content="La concentración es esencial en el tenis. Aprende a mantener la calma y a concentrarte en cada punto, evitando distracciones. 
+          El juego mental fuerte puede marcar la diferencia en situaciones de presión.">
+        Pincha aquí para consejo tenístico</button>
+
+        <div class="toast-container">
+          <div class="toast" id="miToast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+              <strong class="me-auto">¡Consejaco!</strong>
+              <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+              ¡Enhorabuena por haber recibido tu primer consejo!
+            </div>
+          </div>
+        </div>
+    </div>
+
     <include src="./views/footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
   </body>
